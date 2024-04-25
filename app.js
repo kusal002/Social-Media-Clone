@@ -3,13 +3,13 @@ const likeButtons = Array.from(document.getElementsByClassName("like-btn"));
 let settingsMenu = document.querySelector(".settings-menu");
 let darkBtn = document.getElementById("dark-btn");
 
-likeButtons.forEach((eachButton) => {
+likeButtons.map((eachButton, index) => {
   const likeImage = eachButton.getElementsByClassName("like-png")[0];
   const likeCount = eachButton.getElementsByClassName("like-count")[0];
-  console.log(likeImage);
-  console.log(likeCount);
+  console.log(index);
+
   function isLiked() {
-    if (localStorage.getItem("likes") == "true") {
+    if (localStorage.getItem(`index${index}`) == "true") {
       likeCount.textContent = 1;
       likeImage.src = "like-blue.png";
     } else {
@@ -19,12 +19,12 @@ likeButtons.forEach((eachButton) => {
   }
   isLiked();
   eachButton.addEventListener("click", () => {
-    if (localStorage.getItem("likes") == "true") {
-      localStorage.setItem("likes", false);
+    if (localStorage.getItem(`index${index}`) == "true") {
+      localStorage.setItem(`index${index}`, false);
       likeCount.textContent = "Like";
       likeImage.src = "like.png";
     } else {
-      localStorage.setItem("likes", true);
+      localStorage.setItem(`index${index}`, true);
       likeCount.textContent = 1;
       likeImage.src = "like-blue.png";
     }
