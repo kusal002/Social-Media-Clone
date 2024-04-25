@@ -1,29 +1,34 @@
-const likeButton = document.querySelector(".like-btn");
-const likeImage = document.querySelector(".like-png");
-const likeCount = document.querySelector(".like-count");
+const likeButtons = Array.from(document.getElementsByClassName("like-btn"));
+
 let settingsMenu = document.querySelector(".settings-menu");
 let darkBtn = document.getElementById("dark-btn");
 
-likeButton.addEventListener("click", () => {
-  if (likeImage.src.includes("like")) {
-    likeImage.src = "like-blue.png";
-  } else {
-    likeImage.src = "like.png";
+likeButtons.forEach((eachButton) => {
+  const likeImage = eachButton.getElementsByClassName("like-png")[0];
+  const likeCount = eachButton.getElementsByClassName("like-count")[0];
+  console.log(likeImage);
+  console.log(likeCount);
+  function isLiked() {
+    if (localStorage.getItem("likes") == "true") {
+      likeCount.textContent = 1;
+      likeImage.src = "like-blue.png";
+    } else {
+      likeCount.textContent = "Like";
+      likeImage.src = "like.png";
+    }
   }
-});
-
-let likes = 0;
-
-const storedLikes = localStorage.getItem("likes");
-if (storedLikes) {
-  likes = parseInt(storedLikes);
-}
-likeCount.textContent = `${likes}`;
-
-likeButton.addEventListener("click", () => {
-  likes++;
-  localStorage.setItem("likes", likes);
-  likeCount.textContent = `${likes}`;
+  isLiked();
+  eachButton.addEventListener("click", () => {
+    if (localStorage.getItem("likes") == "true") {
+      localStorage.setItem("likes", false);
+      likeCount.textContent = "Like";
+      likeImage.src = "like.png";
+    } else {
+      localStorage.setItem("likes", true);
+      likeCount.textContent = 1;
+      likeImage.src = "like-blue.png";
+    }
+  });
 });
 
 function settingsMenuToggle() {
