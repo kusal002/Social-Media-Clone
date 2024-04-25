@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socialbook</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="index.html">
+                <img src="logo.png" class="logo">
+            </a>
+            <ul>
+                <li><img src="notification.png"></li>
+                <li><img src="inbox.png"></li>
+                <li><img src="video.png"></li>
+            </ul>
+        </div>
+        <div class="nav-right">
+            <div class="search-box">
+                <img src="search.png">
+                <input type="text" placeholder="search">
+            </div>
+            <div class="nav-user-icon online" onclick="settingsMenuToggle()">
+                <img src="profile-pic.png">
+            </div>
+        </div>
+
+        <div class="settings-menu">
+
+            <div id="dark-btn">
+                <span></span>
+            </div>
+
+            <div class="settings-menu-inner">
+                <div class="user-profile">
+                    <img src="profile-pic.png">
+                    <div>
+                        <p>Kush Nicholson</p>
+                        <a href="profile.html">See Your Profile</a>
+                    </div>
+                </div>
+                <hr>
+                <div class="user-profile">
+                    <img src="feedback.png">
+                    <div>
+                        <p>Give feedback</p>
+                        <a>Help us to improve the new Design</a>
+                    </div>
+                </div>
+                <hr>
+
+                <div class="setting-link">
+                    <img src="setting.png" class="settings-icon">
+                    <a>Settings & Privacy <img src="arrow.png" width="10px"></a>
+                </div>
+                <div class="setting-link">
+                    <img src="help.png" class="settings-icon">
+                    <a>Help & Support <img src="arrow.png" width="10px"></a>
+                </div>
+                <div class="setting-link">
+                    <img src="display.png" class="settings-icon">
+                    <a>display & Accessibility <img src="arrow.png" width="10px"></a>
+                </div>
+                <div class="setting-link">
+                    <img src="logout.png" class="settings-icon">
+                    <a>Logout <img src="arrow.png" width="10px"></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="left-sidebar">
+            <div class="imp-links">
+                <a href="#"><img src="news.png"> Latest News</a>
+                <a href="#"><img src="friends.png">Friends</a>
+                <a href="#"><img src="group.png"> Group</a>
+                <a href="#"><img src="marketplace.png"> Marketplace</a>
+                <a href="#"><img src="watch.png"> Watch</a>
+                <a> See More</a>
+            </div>
+            <div class="shortcut-links">
+                <p>Your Shortcuts</p>
+                <a><img src="shortcut-1.png"> Web Developers</a>
+                <a><img src="shortcut-2.png"> Web Design Course</a>
+                <a><img src="shortcut-3.png">Full Stack Developement</a>
+                <a><img src="shortcut-4.png"> Website Experts</a>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="story-gallery">
+
+                <div class="story story1">
+                    <img src="upload.png">
+                    <p>Your Story</p>
+                </div>
+                <div class="story  story2">
+                    <img src="member-1.png">
+                    <p>Champa</p>
+                </div>
+                <div class="story  story3">
+                    <img src="member-2.png">
+                    <p>Haripodo</p>
+                </div>
+                <div class="story  story4">
+                    <img src="member-3.png">
+                    <p>Anarkali</p>
+                </div>
+                <div class="story  story5">
+                    <img src="member-4.png">
+                    <p>Potol</p>
+                </div>
+
+            </div>
+
+            <div class="write-post-container">
+                <div class="user-profile">
+                    <img src="profile-pic.png">
+                    <div>
+                        <p>Kush Nicholson</p>
+                        <small>Public <i class="fa-solid fa-angle-down"></i></small>
+                    </div>
+                </div>
+
+                <div class="post-input-container">
+                    <textarea rows="3" placeholder="What's on your mind Kush"></textarea>
+
+                    <div class="add-post-link">
+                        <a><img src="live-video.png">Live Video</a>
+                        <a><img src="photo.png">Photo/Video</a>
+                        <a><img src="feeling.png">Feeling/Activities</a>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="profile-pic.png">
+                        <div>
+                            <p>Kush Nicholson</p>
+                            <span>June 24 2023, 13:40 pm</span>
+                        </div>
+                    </div>
+                    <a><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, possimus eos.
+                    Eveniet illo quasi
+                    praesentium velit voluptatibus libero reiciendis iusto laborum, autem aperiam.</p>
+                <img src="feed-image-1.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div class="like-btn"> <img src="like.png" class="like-png">
+                            <p class="like-count">0</p>
+                        </div>
+                        <div> <img src="comments.png">35</div>
+                        <div> <img src="share.png">20</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="profile-pic.png">
+                        <div>
+                            <p>John Doe</p>
+                            <span> May 12 2023, 18:30 pm</span>
+                        </div>
+                    </div>
+                    <a><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, possimus eos.
+                    Eveniet illo quasi
+                    praesentium velit voluptatibus libero reiciendis iusto laborum, autem aperiam.</p>
+                <img src="feed-image-2.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div class="like-btn"> <img src="like.png" class="like-png">
+                            <p class="like-count">0</p>
+                        </div>
+                        <div> <img src="comments.png">60</div>
+                        <div> <img src="share.png">56</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="profile-pic.png">
+                        <div>
+                            <p>Narendra Modi</p>
+                            <span>April 19 2023, 11:43 am</span>
+                        </div>
+                    </div>
+                    <a><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, possimus eos.
+                    Eveniet illo quasi
+                    praesentium velit voluptatibus libero reiciendis iusto laborum, autem aperiam.</p>
+                <img src="feed-image-3.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div class="like-btn"> <img src="like.png" class="like-png">
+                            <p class="like-count">0</p>
+                        </div>
+                        <div> <img src="comments.png">13</div>
+                        <div> <img src="share.png">6</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="profile-pic.png">
+                        <div>
+                            <p>Peti pisi</p>
+                            <span>June 13, 1:15 am</span>
+                        </div>
+                    </div>
+                    <a><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, possimus eos.
+                    Eveniet illo quasi
+                    praesentium velit voluptatibus libero reiciendis iusto laborum, autem aperiam.</p>
+                <img src="feed-image-4.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div class="like-btn"> <img src="like.png" clas="like-png">
+                            <p class="like-count">0</p>
+                        </div>
+                        <div> <img src="comments.png">60</div>
+                        <div> <img src="share.png">56</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="post-container">
+                <div class="post-row">
+                    <div class="user-profile">
+                        <img src="profile-pic.png">
+                        <div>
+                            <p>Mota Pond</p>
+                            <span>March 2, 19:02 pm</span>
+                        </div>
+                    </div>
+                    <a><i class="fa-solid fa-ellipsis"></i></a>
+                </div>
+
+                <p class="post-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, possimus eos.
+                    Eveniet illo quasi
+                    praesentium velit voluptatibus libero reiciendis iusto laborum, autem aperiam.</p>
+                <img src="feed-image-5.png" class="post-img">
+
+                <div class="post-row">
+                    <div class="activity-icons">
+                        <div class="like-btn"> <img src="like.png" class="like-png">
+                            <p class="like-count">0</p>
+                        </div>
+                        <div> <img src="comments.png">60</div>
+                        <div> <img src="share.png">56</div>
+                    </div>
+                    <div class="post-profile-icon">
+                        <img src="profile-pic.png"> <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                </div>
+            </div>
+
+
+            <button type="button" class="load-more-btn">Load More</button>
+
+
+
+        </div>
+
+        <div class="right-sidebar">
+            <div class="sidebar-title">
+                <h4>Events</h4>
+                <a>See All</a>
+            </div>
+
+            <div class="event">
+                <div class="left-event">
+                    <h3>18</h3>
+                    <span>March</span>
+                </div>
+                <div class="right-event">
+                    <h4>Social Media</h4>
+                    <p><i class="fa-solid fa-location-dot"></i>Willson Tech Park</p>
+                    <a>More Info</a>
+                </div>
+            </div>
+
+            <div class="event">
+                <div class="left-event">
+                    <h3>22</h3>
+                    <span>June</span>
+                </div>
+                <div class="right-event">
+                    <h4>Mobile Marketing</h4>
+                    <p><i class="fa-solid fa-location-dot"></i>Willson Tech Park</p>
+                    <a>More Info</a>
+                </div>
+            </div>
+
+            <div class="sidebar-title">
+                <h4>Advertisement</h4>
+                <a>Close</a>
+            </div>
+            <img src="advertisement.png" class="sidebar-ads">
+
+            <div class="sidebar-title">
+                <h4>Conversations</h4>
+                <a>hide Chats</a>
+            </div>
+
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="member-1.png">
+                </div>
+                <p>Peti pisi</p>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="member-2.png">
+                </div>
+                <p>Potolkumar</p>
+            </div>
+
+            <div class="online-list">
+                <div class="online">
+                    <img src="member-3.png">
+                </div>
+                <p>Haripodo ganguly</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p>@Copyright 2024 - The Kusal Laik</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
