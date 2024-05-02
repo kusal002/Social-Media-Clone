@@ -646,6 +646,25 @@ nav{
     left: 0;
 }
 
+#links{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+#links a{
+    margin: 10px;
+}
+#links i{
+    font-size: 20px;
+    padding: 8px;
+    cursor: pointer;
+  color: #1c0258;
+}
+#links i:hover{
+    font-size: 25px;
+}
+
 /* -----media query for home page----- */
 
 @media (max-width: 900px){
