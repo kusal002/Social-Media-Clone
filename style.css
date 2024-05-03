@@ -661,9 +661,9 @@ nav{
     cursor: pointer;
   color: #1c0258;
 }
-#links i:hover{
+/* #links i:hover{
     font-size: 25px;
-}
+} */
 
 /* -----media query for home page----- */
 
